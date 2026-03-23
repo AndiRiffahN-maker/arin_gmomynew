@@ -13,10 +13,8 @@
   <div class="left">
     <h2>Lets Capture your HardWork!</h2>
     <div class="photo">
-      <div class="sky">
-        <div class="cloud"></div>
-        <div class="hill"></div>
-      </div>
+    <video id="video" autoplay></video>
+    <canvas id="canvas"></canvas>
     </div>
   </div>
 
@@ -37,6 +35,42 @@
   </div>
 
 </div>
+
+<script>
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const button = document.querySelector('.btn');
+
+// AKSES KAMERA
+navigator.mediaDevices.getUserMedia({ video: true })
+  .then(stream => {
+    video.srcObject = stream;
+  })
+  .catch(err => {
+    alert("Kamera tidak bisa diakses!");
+    console.error(err);
+  });
+
+// SAAT BUTTON DIKLIK
+button.addEventListener('click', () => {
+  const context = canvas.getContext('2d');
+
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+
+  // ambil gambar dari video
+  context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+  // ubah ke gambar
+  const image = canvas.toDataURL('image/png');
+
+  // download otomatis
+  const link = document.createElement('a');
+  link.href = image;
+  link.download = 'foto.png';
+  link.click();
+});
+</script>
 
 </body>
 </html>
