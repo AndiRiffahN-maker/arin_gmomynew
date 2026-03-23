@@ -8,6 +8,8 @@ body {
   display: flex;
   justify-content: center; /* 🔥 bikin ke tengah */
   gap: 80px; /* jarak antara kiri & kanan */
+   max-width: 1000px;
+  margin: auto;
 }
 
 
