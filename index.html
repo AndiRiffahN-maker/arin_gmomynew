@@ -36,7 +36,18 @@
 
 </div>
 
+
+<div class="styles">
+  <div class="box" data-style="normal"></div>
+  <div class="box" data-style="bw"></div>
+  <div class="box" data-style="warm"></div>
+  <div class="box" data-style="cool"></div>
+</div>
+
+
+
 <script>
+const boxes = document.querySelectorAll('.box');
 const video = document.getElementById('video');
 const canvas = document.getElementById('canvas');
 const button = document.querySelector('.btn');
@@ -70,6 +81,45 @@ button.addEventListener('click', () => {
   link.download = 'foto.png';
   link.click();
 });
+
+
+
+let selectedStyle = "normal";
+
+// PILIH STYLE
+boxes.forEach(box => {
+  box.addEventListener('click', () => {
+    boxes.forEach(b => b.classList.remove('active'));
+    box.classList.add('active');
+
+    selectedStyle = box.dataset.style;
+
+    // preview langsung di kamera
+    video.className = selectedStyle;
+  });
+});
+
+// FOTO + PINDAH KE HALAMAN HASIL
+button.addEventListener('click', () => {
+  const ctx = canvas.getContext('2d');
+
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+
+  // apply filter ke canvas
+  ctx.filter = getComputedStyle(video).filter;
+
+  ctx.drawImage(video, 0, 0);
+
+  const image = canvas.toDataURL();
+
+  // SIMPAN KE LOCAL STORAGE
+  localStorage.setItem("photo", image);
+
+  // PINDAH HALAMAN
+  window.location.href = "result.html";
+});
+
 </script>
 
 </body>

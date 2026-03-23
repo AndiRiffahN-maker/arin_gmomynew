@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Result</title>
+<style>
+body {
+  background: #e6d7a8;
+  font-family: 'Comic Sans MS', cursive;
+  padding: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  width: 400px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div>
+    <h2>Congratulation!</h2>
+    <p>Now you are Artist professional you can be :</p>
+    <ul>
+      <li>storyboardist</li>
+      <li>colorist</li>
+      <li>outliners</li>
+    </ul>
+    <p>take your sticker at open house!</p>
+  </div>
+
+  <img id="result">
+</div>
+
+<script>
+document.getElementById("result").src = localStorage.getItem("photo");
+</script>
+
+</body>
+</html>

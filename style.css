@@ -112,3 +112,20 @@ canvas {
   cursor: pointer;
   font-family: 'Comic Sans MS', cursive;
 }
+
+.normal {}
+
+.bw {
+  filter: grayscale(100%);
+}
+.warm {
+  filter: sepia(60%) saturate(120%);
+}
+.cool {
+  filter: hue-rotate(180deg);
+}
+
+/* biar keliatan dipilih */
+.box.active {
+  border: 3px solid red;
+}
