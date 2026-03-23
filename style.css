@@ -1,60 +1,62 @@
 body {
   margin: 0;
+  padding: 20px;
   font-family: 'Comic Sans MS', cursive;
   background-color: #e6d7a8;
-  padding: 20px;
 }
 
+/* CONTAINER UTAMA */
 .container {
   display: flex;
-  justify-content: center; /* pusatkan */
-  align-items: flex-start;
-  gap: 80px;
+  justify-content: center;
+  align-items: center; /* biar sejajar tengah */
+  gap: 100px;
 
-  max-width: 1100px;
-  margin: 0 auto; /* 🔥 ini yang bikin center beneran */
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
+/* LEFT & RIGHT BALANCE */
+.left, .right {
+  flex: 1;
+}
 
 /* LEFT */
+.left {
+  max-width: 500px;
+}
+
 .left h2 {
   margin-bottom: 20px;
+  font-size: 24px;
 }
 
+/* FRAME FOTO */
 .photo {
-  width: 420px;
-  height: 300px;
-  background: #eee;
-  padding: 15px;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-}
-
-.sky {
   width: 100%;
-  height: 100%;
-  background: #a9cbe8;
+  height: 300px;
+  padding: 20px 20px 40px 20px;
+  background: white;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+
   position: relative;
   overflow: hidden;
 }
 
-.cloud {
-  width: 80px;
-  height: 40px;
-  background: white;
-  border-radius: 50px;
+/* VIDEO */
+video {
   position: absolute;
-  top: 40px;
-  left: 150px;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.hill {
-  width: 200%;
-  height: 150px;
-  background: linear-gradient(#9acb4a, #5f8f1f);
-  border-radius: 50%;
-  position: absolute;
-  bottom: -50px;
-  left: -50%;
+/* CANVAS */
+canvas {
+  display: none;
 }
 
 /* RIGHT */
@@ -62,10 +64,12 @@ body {
   text-align: center;
 }
 
+/* TITLE */
 .right h2 {
   margin-bottom: 5px;
 }
 
+/* STYLE BOX */
 .styles {
   display: grid;
   grid-template-columns: repeat(2, 100px);
@@ -93,50 +97,18 @@ body {
   left: 20px;
 }
 
+/* ICON CAMERA */
 .camera {
   font-size: 40px;
   margin: 10px 0;
 }
 
+/* BUTTON */
 .btn {
   background: #fff;
   border: 2px solid black;
   border-radius: 20px;
-  padding: 5px 20px;
+  padding: 6px 20px;
   cursor: pointer;
   font-family: 'Comic Sans MS', cursive;
 }
-
-video, canvas {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-canvas {
-  display: none;
-}
-
-.photo {
-  width: 420px;
-  height: 300px;
-  padding: 20px 20px 40px 20px; /* bawah lebih tebal */
-  background: white;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
-  
-  position: relative;
-  overflow: hidden; /* 🔥 ini penting biar video gak keluar */
-}
-
-
-
-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* biar penuh & rapi */
-}
-
