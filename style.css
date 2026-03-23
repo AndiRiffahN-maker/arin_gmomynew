@@ -6,9 +6,10 @@ body {
 
 .container {
   display: flex;
-  justify-content: space-between;
-  padding: 40px;
+  justify-content: center; /* 🔥 bikin ke tengah */
+  gap: 80px; /* jarak antara kiri & kanan */
 }
+
 
 /* LEFT */
 .left h2 {
