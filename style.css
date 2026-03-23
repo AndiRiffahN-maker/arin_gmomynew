@@ -2,14 +2,17 @@ body {
   margin: 0;
   font-family: 'Comic Sans MS', cursive;
   background-color: #e6d7a8;
+  padding: 20px;
 }
 
 .container {
   display: flex;
-  justify-content: center; /* 🔥 bikin ke tengah */
-  gap: 80px; /* jarak antara kiri & kanan */
-   max-width: 1000px;
-  margin: auto;
+  justify-content: center; /* pusatkan */
+  align-items: flex-start;
+  gap: 80px;
+
+  max-width: 1100px;
+  margin: 0 auto; /* 🔥 ini yang bikin center beneran */
 }
 
 
@@ -57,7 +60,6 @@ body {
 /* RIGHT */
 .right {
   text-align: center;
-  margin-right: 60px;
 }
 
 .right h2 {
