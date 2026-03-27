@@ -1,0 +1,127 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #ddd;
+}
+
+/* HERO */
+.hero {
+  background: #bbb;
+  padding: 20px;
+  text-align: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo {
+  background: #999;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  background: #888;
+  border-radius: 50%;
+}
+
+.hero-content .star {
+  font-size: 80px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: none;
+  background: #999;
+  border-radius: 20px;
+}
+
+/* SECTION */
+.section {
+  padding: 20px;
+  border-top: 1px solid #aaa;
+}
+
+.cards {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.card {
+  flex: 1;
+  background: #aaa;
+  padding: 30px;
+  text-align: center;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.box {
+  background: #aaa;
+  padding: 20px;
+  text-align: center;
+}
+
+.big {
+  font-size: 60px;
+}
+
+/* SMALL STARS */
+.small-stars span {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* BOTTOM MINI */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mini {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mini .star {
+  font-size: 40px;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #bbb;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.dots div {
+  width: 15px;
+  height: 15px;
+  background: #888;
+  border-radius: 50%;
+}
